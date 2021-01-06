@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(145deg, #4b9ddb, #59baff)
+}
+.logo{
+  position: absolute;
+  top: 0;
+}
+.dark {
+    margin-bottom:20px ;
+}
+
+.dark button {
+    background: darkslategray;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.clock-face {
+    width: 360px;
+    height: 360px;
+    background-image: url('clock1.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 50%;
+    border: 10px solid #4b9ddb;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+        inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+        0 15px 15px rgba(0, 0, 0, 0.3),
+        inset 0 15px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.5s all linear;
+}
+
+.clock-face::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: crimson;
+    border-radius: 50%;
+    z-index: 20;
+
+}
+
+.hand {
+    width: 50%;
+    height: 3px;
+    background-color: #93ecff;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    border-radius: 10px;
+}
+.rezult{
+    font-size: 1.4rem;
+}
+
+.digit {
+    font-size: 2rem;
+}
+
+.active {
+    background: darkslategray;
+}
+
+.active1 {
+    border-color: darkslategray;
+}
+@media (max-width: 450px) {
+    .clock-face {
+        width: 300px;
+        height: 300px;
+    }
+}
+    @media (max-width: 330px) {
+        .clock-face {
+            width: 200px;
+            height: 200px;
+        }
+
+}
